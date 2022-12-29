@@ -3,6 +3,11 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Tenant;
+use App\Models\User;
+use Database\Factories\TenantFactory;
+use Database\Factories\UserFactory;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -14,6 +19,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
+        Tenant::factory(10)->create();
+        User::factory(10)->create();
+
+
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
